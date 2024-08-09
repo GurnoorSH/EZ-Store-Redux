@@ -7,7 +7,7 @@ import { Route ,Routes } from "react-router-dom";
 function App() {
   return (
    <div>
-    <div className="bg-slate-900">
+    <div className="bg-slate-800">
       <Navbar></Navbar>
     </div>
     <Routes>

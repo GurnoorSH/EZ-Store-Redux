@@ -33,15 +33,15 @@ const Product = ({ post }) => {
       <div className="h-[180px]">
         <img className="h-full w-full" src={post.image} />
       </div>
-      <div>
+      <div className="flex w-full">
         {" "}
         <div className="flex justify-between gap-12 items-center w-full mt-5">
-          <p className="text-green-600 font-semibold "> {post.price}</p>
+          <p className="text-green-600 font-semibold "> $ {post.price}</p>
         </div>
         {cart.some((p) => p.id == post.id) ? (
-          <button className='text-gray-700 border-2 border-gray-200 rounded-full font-semibold text-[12px] p-1 px-3 uppercase hover:bg-gray-700 hover:text-white transition duration-300 ease-in' onClick={removeFromCart}> Remove Item</button>
+          <button className='text-gray-700 border-2 w-full border-gray-200 rounded-full font-semibold text-[12px] p-1 px-3 uppercase hover:bg-gray-700 hover:text-white transition duration-300 ease-in' onClick={removeFromCart}> Remove Item</button>
         ) : (
-          <button className='text-gray-700 border-2 border-gray-200 rounded-full font-semibold text-[12px] p-1 px-3 uppercase hover:bg-gray-700 hover:text-white transition duration-300 ease-in' onClick={addToCart}> Add To Cart</button>
+          <button className='text-gray-700 border-2 border-gray-200 w-full rounded-full font-semibold text-[12px] p-1 px-3 uppercase hover:bg-gray-700 hover:text-white transition duration-300 ease-in' onClick={addToCart}> Add To Cart</button>
         )}
       </div>
     </div>
